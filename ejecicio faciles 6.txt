@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+
+int contarOvejasPresentes(const std::vector<bool>& ovejas) {
+    int contador = 0;
+    for (bool oveja : ovejas) {
+        if (oveja == true) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
+
+int main() {
+    std::vector<bool> ovejas = {
+        true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true
+    };
+    int cantidadPresentes = contarOvejasPresentes(ovejas);
+    std::cout << "Número de ovejas presentes: " << cantidadPresentes << std::endl;
+
+    return 0;
+}

@@ -1,0 +1,20 @@
+#include <iostream>
+unsigned long long calcularFactorial(int numero) {
+    if (numero == 0) {
+        return 1;
+    }
+    unsigned long long factorial = 1;
+    for (int i = 1; i <= numero; i++) {
+        factorial *= i;
+    }
+    return factorial;
+}
+int main() {
+    int numero;
+    std::cout << "Ingrese un número: ";
+    std::cin >> numero;
+    unsigned long long factorial = calcularFactorial(numero);
+    std::cout << "El factorial de " << numero << " es " << factorial << std::endl;
+    return 0;
+}
+
